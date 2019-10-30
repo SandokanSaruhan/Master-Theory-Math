@@ -1,0 +1,58 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8"/>
+	<title>Master Theorem Sample (JavaScript)</title>
+	<meta http-equiv="Content-Style-Type" content="text/css"/>
+	<meta http-equiv="Content-Script-Type" content="application/javascript"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="css/style.css"/> 
+</head>
+<body>
+
+<h1>Master Theorem Sample (JavaScript)</h1>
+<p>
+	By solving a recurrence relation , it seems we can analyze the asymptotic run time of a recursive algorithm in the study of complexity theory in computer science <a href="https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)" title="Wikipedia: Master theorem (analysis of algorithms)">Master Theorem</a> (a.k.a. Master method). 
+</p>
+<p>
+	This JavaScript app, automatically solves your given recurrence relation by applying the versatile. But it only supports polynomial or polylogarithmic functions
+</p>
+
+<h2>Application</h2>
+<form action="#" method="get" onsubmit="calculate(); return false;">
+	<h3>Input</h3>
+	<p style="font-size:120%">Format:<span style="padding:0em 0.2em"> </span>\(T(n) \: = \: a \: T(n \, / \, b) \, + \, Θ(n^k \, (\log n)^i)\).</p>
+	<table>
+		<tbody>
+			<tr>
+				<td>\(a\):</td>
+				<td><input type="number" value="" min="0" id="var_a" style="width:10em" autocomplete="off" step="any" oninput="calculate();"/></td>
+			</tr>
+			<tr>
+				<td>\(b\):</td>
+				<td><input type="number" value="" min="1" id="var_b" style="width:10em" autocomplete="off" step="any" oninput="calculate();"/></td>
+			</tr>
+			<tr>
+				<td>\(k\):</td>
+				<td><input type="number" value="" min="0" id="var_k" style="width:10em" autocomplete="off" step="any" oninput="calculate();"/></td>
+			</tr>
+			<tr>
+				<td>\(i\):</td>
+				<td><input type="number" value="0" min="0" id="var_i" style="width:10em" autocomplete="off" step="any" oninput="calculate();"/> (usually 0)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Calculate"/> <input type="reset" value="Clear" onclick="clearOutput();"/></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>Output</h3>
+	<p style="font-size:120%; line-height:1.8">Recurrence:<span style="padding:0em 0.3em"> </span><span id="recurrence"><span></span></span><br/>
+	Solution:<span style="padding:0em 0.2em"> </span><span id="solution"><span></span></span></p>
+</form>
+<script type="application/javascript" src="js/calculator.js"></script>
+<script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async="async"></script>
+
+<a href="https://github.com/nayuki">Thanks to Nayuki for enlightening me on this matter</a>
+</body>
+</html>
