@@ -1,5 +1,5 @@
 # Master Theorem Sample (JavaScript)
-This is a simple App for usage and communicate with the Mercedes Benz One API. 
+This is a simple App about Complexity Theory in computer science by enlightening of Nayuki. 
 
 ## The Problem
 
